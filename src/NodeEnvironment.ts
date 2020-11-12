@@ -26,6 +26,17 @@ class WebSocketServer {
 require("fake-indexeddb/auto");
 global.RTCPeerConnection = require('wrtc').RTCPeerConnection;
 
+if (global.btoa === undefined) {
+    global.btoa = require('btoa');
+}
+
+if (global.atob === undefined) {
+    global.atob = require('atob');
+}
+
+if (global.WebSocket === undefined) {
+    (global as any).WebSocket = WebSocket;
+}
 
 
 
