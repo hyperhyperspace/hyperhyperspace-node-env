@@ -38,6 +38,11 @@ if (global.WebSocket === undefined) {
     (global as any).WebSocket = WebSocket;
 }
 
+const { Crypto } = require("@peculiar/webcrypto");
+
+const crypto = new Crypto();
+
+(globalThis as any).webCryptoOverrideImpl = crypto.subtle;
 
 
 
