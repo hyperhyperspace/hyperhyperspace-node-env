@@ -24,7 +24,12 @@ class WebSocketServer {
 (global as any).WebSocketServerImpl = WebSocketServer;
 
 require("fake-indexeddb/auto");
-global.RTCPeerConnection = require('wrtc').RTCPeerConnection;
+
+try {
+  global.RTCPeerConnection = require('wrtc').RTCPeerConnection;
+} catch (e) {
+
+}
 
 if (global.btoa === undefined) {
     global.btoa = require('btoa');

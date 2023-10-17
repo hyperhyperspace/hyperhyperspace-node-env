@@ -22,9 +22,11 @@
     "atob": "^2.1.2",
     "btoa": "^1.2.1",
     "fake-indexeddb": "^3.1.2",
-    "wrtc": "^0.4.7",
     "ws": "^7.4.0",
     "@peculiar/webcrypto": "^1.1.6"
+  },
+  "optionalDependencies": {
+    "wrtc": "^0.4.7"
   },
   "devDependencies": {
     "@types/ws": "^7.2.7",
